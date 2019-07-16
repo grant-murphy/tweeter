@@ -1,0 +1,65 @@
+/* ---------------------------- TWEET POST ---------------------------- */
+
+.tweets {
+  margin: 0;
+  overflow: hidden;
+}
+
+.tweet {
+  overflow: hidden;
+  margin-bottom: 30px;
+  padding: 15px;
+  border: black solid 3px;
+}
+
+.tweet > .content {
+  border-bottom: solid black 3px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.tweet > header {
+  margin: 0;
+  overflow: hidden;
+}
+
+.tweet > header > .name {
+  margin: 0;
+  float: left;
+  overflow: hidden;
+  padding: 24px;
+}
+
+.tweet > header > .avatar {
+  width: 3.4em;
+  float: left;
+}
+
+.tweet > header > .handle {
+  float: right;
+  margin-right: 30px;
+}
+
+.tweet > footer {
+  margin: 0;
+  overflow: hidden;
+}
+
+.tweet > footer > p {
+  margin: 0px 30px;
+  float: left;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.tweet > footer > .buttons {
+  overflow: hidden;
+  margin: -2px 30px;
+}
+
+.tweet > footer > .buttons > img {
+  width: .65em;
+  float: right;
+  margin: 5px;
+}
+
