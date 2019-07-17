@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  // --- our code goes here ---
 
   $('.tweet-text-area').on("input", function () {
     var maxlength = 140;
