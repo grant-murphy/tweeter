@@ -1,6 +1,6 @@
-  const createTweetElement = function (tweetData) {
-    
-    return `
+const createTweetElement = function (tweetData) {
+
+  return `
     <article class="tweet">
       <header>
         <img class="avatar" src="${tweetData.user.avatars}" />
@@ -18,23 +18,52 @@
       </footer>
   </article> `
 
-  }
-  
-  const renderTweets = function(tweets) {
-    let array = [];
-    for(let tweet of tweets) {
-      array.unshift(createTweetElement(tweet));
-      }
-      $('#tweets-container').append(array)
-    }
-
-    const loadTweets = function() {
-      $.ajax('/tweets', { method: 'GET' })
-      .then(function (tweets) {
-       renderTweets(tweets);
-      });
 }
 
-  $(document).ready(function() {
+const renderTweets = function (tweets) {
+  let array = [];
+  for (let tweet of tweets) {
+    array.unshift(createTweetElement(tweet));
+  }
+  $('#tweets-container').append(array)
+}
+
+const loadTweets = function () {
+  $.ajax('/tweets/', { method: 'GET' })
+    .then(function (tweets) {
+      $('#tweets-container').empty()
+      renderTweets(tweets);
+    });
+}
+
+const formSubmission = function () {
+  $("#submit-form").submit(function (event) {
+    event.preventDefault();
+    const form_data = $(this).serialize();
+    const counterLen = $(this).children(".tweet-text-area").val().length;
+
+    if (counterLen === 0 || counterLen > 140) {
+      if (counterLen === 0) {
+        alert('Text field empty!')
+      }
+      if (counterLen > 140) {
+        alert('Text field too long')
+      }
+    } else {
+      $.ajax('/tweets/', {
+        method: 'POST',
+        data: form_data
+      })
+        .then(function () {
+          loadTweets();
+          console.log('hello')
+        })
+    }
+  });
+}
+
+$(document).ready(function () {
   loadTweets();
+  formSubmission();
+
 });
