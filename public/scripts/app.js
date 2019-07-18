@@ -1,3 +1,18 @@
+const escape = function (str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
+const toggleButton = function() {
+  $( ".new-tweet" ).slideToggle("slow")
+};
+
+const errorButton = function() {
+  $( ".error-messages" ).slideToggle("slow")
+};
+
+
 const createTweetElement = function (tweetData) {
 
   return `
@@ -7,7 +22,7 @@ const createTweetElement = function (tweetData) {
         <p class="name">${tweetData.user.name}</p>
         <p class="handle">${tweetData.user.handle}</p>
       </header>
-      <p class="content">${tweetData.content.text}</p>
+      <p class="content">${escape(tweetData.content.text)}</p>
       <footer>
         <p class="created_at">${new Date(tweetData.created_at)}</p>
         <div class="buttons">
@@ -17,7 +32,6 @@ const createTweetElement = function (tweetData) {
         </div>
       </footer>
   </article> `
-
 }
 
 const renderTweets = function (tweets) {
@@ -41,13 +55,15 @@ const formSubmission = function () {
     event.preventDefault();
     const form_data = $(this).serialize();
     const counterLen = $(this).children(".tweet-text-area").val().length;
-
+    
     if (counterLen === 0 || counterLen > 140) {
       if (counterLen === 0) {
-        alert('Text field empty!')
+        errorButton()
+        $( ".error-messages" ).html('ERROR')
       }
       if (counterLen > 140) {
-        alert('Text field too long')
+        errorButton()
+        $( ".error-messages" ).html('TOO MANY COUNTS')
       }
     } else {
       $.ajax('/tweets/', {
@@ -55,8 +71,10 @@ const formSubmission = function () {
         data: form_data
       })
         .then(function () {
+          $('.tweet-text-area').val('');
+          $('.counter').text(140);
           loadTweets();
-          console.log('hello')
+         
         })
     }
   });
@@ -65,5 +83,6 @@ const formSubmission = function () {
 $(document).ready(function () {
   loadTweets();
   formSubmission();
+  $('.error-messages').hide();
 
 });

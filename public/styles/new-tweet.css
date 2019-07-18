@@ -1,7 +1,10 @@
 /* ---------------------------- TWEET FORM ---------------------------- */
+.new-tweet {
+  display: none;
+}
 
 .new-tweet > form {
-  padding: 30px 0;
+  padding: 30px 0 0px 0;
   overflow: hidden;
 }
 
@@ -30,4 +33,13 @@
 
 .new-tweet > form > .counter.invalid {
   color: red;
+}
+
+/* ----------------------------ERROR MESSAGE----------------------------  */
+
+.error-messages {
+  margin: 30px 0 0px 0;
+  border: red solid;
+  text-align: center;
+
 }

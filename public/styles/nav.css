@@ -17,11 +17,22 @@ nav {
 .navLogo {
   font-family: 'bungee';
   float: left;
-  
 }
 
 .navTweet {
   font-family: 'Source Sans Pro', sans-serif;
   float: right;
+}
 
+.fa-angle-double-down {
+  font-size: 1.5em;
+  cursor: pointer;
+  float: right;
+  clear: both;
+  margin: 0px 79px;
+  text-decoration: none;
+  color: springgreen;
+  border: none;
+  background: none;
+  outline: inherit;
 }
