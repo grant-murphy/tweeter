@@ -7,9 +7,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["Main page, where users login"](https://github.com/grant-murphy/tinyapp/blob/master/docs/main.png)
-!["List of your URLs with the option to either delete or edit them"](https://github.com/grant-murphy/tinyapp/blob/master/docs/urls-index.png)
-!["Conversion of long URL into short URL with the option to edit"](https://github.com/grant-murphy/tinyapp/blob/master/docs/urls-page.png)
+!["Main page, without toggle implementation"](https://github.com/grant-murphy/tweeter/blob/master/docs/main-page-no-tweet-field.png)
+!["Main page, displaying a responsive design"](https://github.com/grant-murphy/tweeter/blob/master/docs/main-page-responsive.png)
+!["Main page, with toggle implementation"](https://github.com/grant-murphy/tweeter/blob/master/docs/main-page-toggled-tweet-field.png)
 
 ## Getting Started
 
