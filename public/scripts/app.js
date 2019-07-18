@@ -9,7 +9,7 @@ const toggleButton = function() {
 };
 
 const errorButton = function() {
-  $( ".error-messages" ).slideToggle("slow")
+  $( ".errors" ).slideToggle("slow")
 };
 
 
@@ -59,11 +59,11 @@ const formSubmission = function () {
     if (counterLen === 0 || counterLen > 140) {
       if (counterLen === 0) {
         errorButton()
-        $( ".error-messages" ).html('ERROR')
+        $( ".errors" ).html(`<img src="/images/invalid-input.png" />`)
       }
       if (counterLen > 140) {
         errorButton()
-        $( ".error-messages" ).html('TOO MANY COUNTS')
+        $( ".errors" ).html(`<img src="/images/exceeded-characters.png" />`)
       }
     } else {
       $.ajax('/tweets/', {
@@ -83,6 +83,6 @@ const formSubmission = function () {
 $(document).ready(function () {
   loadTweets();
   formSubmission();
-  $('.error-messages').hide();
+  $('.errors').hide();
 
 });

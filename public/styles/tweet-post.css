@@ -3,11 +3,12 @@
 .tweets {
   margin-top: 30px;
   overflow: hidden;
+  
 }
 
 .tweet {
   overflow: hidden;
-  margin-bottom: 30px;
+  margin: 30px;
   padding: 15px;
   border: black solid 3px;
 }
@@ -35,9 +36,18 @@
   float: left;
 }
 
-.tweet > header > .handle {
+.handle {
+  float: right;
+  color: transparent;
+  
+}
+
+.tweet:hover > header > .handle {
   float: right;
   margin-right: 30px;
+  color: black;
+  opacity: 20;
+  transition: 1s;
 }
 
 .tweet > footer {
@@ -63,3 +73,10 @@
   margin: 5px;
 }
 
+.tweet:hover {
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         10px 10px 10px 1px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  text-shadow: 1px 1px #ccc;
+  
+}

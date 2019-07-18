@@ -5,7 +5,7 @@
   width: 100%;
   margin-top: 120px;
   padding: 0%;
-  background-color: #d99e31;
+  background-color: #EADED4;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 
 }
@@ -14,6 +14,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding: 33px;
   justify-content: center;
   align-items: center;
 

@@ -1,0 +1,64 @@
+/* ---------------------------- RESPONSIVE CSS ---------------------------- */
+
+@media only screen and (min-width: 1024px) {
+  main {
+    margin: 0 auto;
+    width: 56%;
+    overflow: hidden;
+    float: right;
+    margin: 70px 120px 0px 0px;
+  }
+  
+
+  .main-header {
+    height: 400px;
+    width: 30%;
+    margin: 120px 0px 0px 100px;
+    padding: 0%;
+    float: left;
+    background-color: #eaded4;
+    background-image: url(https://www.transparenttextures.com/patterns/asfalt-light.png);
+  }
+
+
+  .tweet {
+    overflow: hidden;
+    margin: 20px;
+    padding: 15px;
+    border: black solid 3px;
+  }
+
+  .tweets {
+    margin-top: 30px;
+    overflow: hidden;
+  }
+
+  .new-tweet > form {
+    padding: 60px 30px 0px 30px;
+    overflow: hidden;
+  }
+
+}
+
+
+@media only screen and (max-width: 1572px) {
+  main {
+    width: 52%;
+    margin: 70px 80px 0px 0px;
+  }
+
+.main-header {
+  margin: 120px 0px 0px 80px;
+}
+}
+
+@media only screen and (max-width: 1023px) {
+  main {
+    width: 100%;
+
+  }
+
+  .main-header {
+    margin: 0px;
+  }
+}

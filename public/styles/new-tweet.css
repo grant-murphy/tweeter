@@ -4,8 +4,10 @@
 }
 
 .new-tweet > form {
-  padding: 30px 0 0px 0;
+  padding: 25px 15px 0px 15px;
   overflow: hidden;
+  margin: 0px 10px 0px 10px;
+  
 }
 
 .new-tweet > form > textarea {
@@ -14,21 +16,39 @@
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
   border: none;
-  border-bottom: solid;
   background-color: #f4f1ec;
   resize: none;
+  animation: shadow-pulse 1s infinite;
+  border-radius: 25px;
+  outline:none;
+  padding: 5px 0px 0px 15px;
 }
 
 .new-tweet > form > input {
   font-family: "bungee";
-  color: #ffffff;
-  background-color: #4152a1;
+  color: #f4f1ec;
+  background-color: #536785;
   cursor: pointer;
+  margin-top: 15px;
+  outline: none;
+  box-shadow: 0px 9px #666;
 }
+
+.new-tweet > form > input:hover {
+  background-color: #3e8e41
+}
+
+.new-tweet > form > input:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+  box-shadow: 0 9px #999;
+}
+
 
 .new-tweet > form > .counter {
   float: right;
   font-family: "bungee";
+  margin-top: 15px;
 }
 
 .new-tweet > form > .counter.invalid {
@@ -37,9 +57,37 @@
 
 /* ----------------------------ERROR MESSAGE----------------------------  */
 
-.error-messages {
-  margin: 30px 0 0px 0;
-  border: red solid;
+.errors {
+  margin: 50px 0px -45px 0px;
   text-align: center;
+}
 
+.errors img {
+  width: 20em;
+}
+
+.tweet .error-messages {
+  float: right;
+}
+
+/* ----------------------------BUTTON ANIMATION----------------------------  */
+
+@keyframes shadow-pulse-big
+{
+  0% {
+    box-shadow: 0 0 0 0px rgb(226, 228, 235)
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgb(179, 187, 214)
+  }
+}
+
+@keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgb(209, 211, 218)
+  }
+  100% {
+    box-shadow: 0 0 0 15px rgb(194, 199, 214)
+  }
 }

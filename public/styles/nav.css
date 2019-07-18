@@ -1,8 +1,8 @@
 /* ---------------------------- NAV STYLING ---------------------------- */
 
 nav {
-  background-color: #4056A1;
-  color: #ffffff;
+  background-color: #536785;
+  color: #EADED4;
   height: 120px;
   width: 100%;
   z-index: 1000; /*may need to adjust*/
@@ -11,7 +11,6 @@ nav {
     right: 0;
     left: 0;
   padding: 1.5em;
-  
 }
 
 .navLogo {
@@ -31,8 +30,20 @@ nav {
   clear: both;
   margin: 0px 79px;
   text-decoration: none;
-  color: springgreen;
+  color: #D77D6F;
   border: none;
   background: none;
   outline: inherit;
+  -webkit-animation: bounce 1s infinite alternate;
+  -moz-animation: bounce 1s infinite alternate;
+  animation: bounce 1s infinite alternate;
+}
+@-webkit-keyframes bounce {
+  to { -webkit-transform: scale(1.7); }
+}
+@-moz-keyframes bounce {
+  to { -moz-transform: scale(1.7); }
+}
+@keyframes bounce {
+  to { transform: scale(1.7); }
 }
