@@ -1,13 +1,12 @@
 /* ---------------------------- HEADER STYLING ---------------------------- */
 
-.main-header  {
+.main-header {
   height: 400px;
   width: 100%;
   margin-top: 120px;
   padding: 0%;
-  background-color: #EADED4;
+  background-color: #eaded4;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-
 }
 
 .main-header img {
@@ -17,7 +16,6 @@
   padding: 33px;
   justify-content: center;
   align-items: center;
-
 }
 
 .main-header h2 {
@@ -25,5 +23,4 @@
   justify-content: center;
   align-items: center;
   margin: 0%;
-  
 }

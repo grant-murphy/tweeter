@@ -4,14 +4,19 @@ const escape = function (str) {
   return div.innerHTML;
 }
 
-const toggleButton = function() {
-  $( ".new-tweet" ).slideToggle("slow")
+const focusField = function() {
+  $( ".tweet-text-area" ).focus()
+}
+
+const toggleButton = function () {
+  $(".new-tweet").slideToggle("slow", function () {
+    focusField()
+  })
 };
 
-const errorButton = function() {
-  $( ".errors" ).slideToggle("slow")
+const errorButton = function () {
+  $(".errors").slideToggle("slow")
 };
-
 
 const createTweetElement = function (tweetData) {
 
@@ -24,7 +29,7 @@ const createTweetElement = function (tweetData) {
       </header>
       <p class="content">${escape(tweetData.content.text)}</p>
       <footer>
-        <p class="created_at">${new Date(tweetData.created_at)}</p>
+        <p class="created_at">${jQuery.timeago(new Date(tweetData.created_at))}</p>
         <div class="buttons">
           <img src="/images/flag.png" />
           <img src="/images/refresh.png" />
@@ -55,15 +60,15 @@ const formSubmission = function () {
     event.preventDefault();
     const form_data = $(this).serialize();
     const counterLen = $(this).children(".tweet-text-area").val().length;
-    
+
     if (counterLen === 0 || counterLen > 140) {
       if (counterLen === 0) {
         errorButton()
-        $( ".errors" ).html(`<img src="/images/invalid-input.png" />`)
+        $(".errors").html(`<img src="/images/invalid-input.png" />`)
       }
       if (counterLen > 140) {
         errorButton()
-        $( ".errors" ).html(`<img src="/images/exceeded-characters.png" />`)
+        $(".errors").html(`<img src="/images/exceeded-characters.png" />`)
       }
     } else {
       $.ajax('/tweets/', {
@@ -74,7 +79,6 @@ const formSubmission = function () {
           $('.tweet-text-area').val('');
           $('.counter').text(140);
           loadTweets();
-         
         })
     }
   });
@@ -84,5 +88,5 @@ $(document).ready(function () {
   loadTweets();
   formSubmission();
   $('.errors').hide();
-
+  $("time.timeago").timeago();
 });

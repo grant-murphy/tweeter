@@ -5,19 +5,13 @@
  */
 
 /* ---------------------------- DELETE BEFORE SUBMISSION ---------------------------- */
- /* * {
-  border: 1px dotted red;
-
-} */
 
 html {
   box-sizing: border-box;
-
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
-
 }
 
 /* ---------------------------- GLOBAL LAYOUT ---------------------------- */
@@ -36,5 +30,3 @@ main {
   width: 90%;
   overflow: hidden;
 }
-
-/* ---------------------------- RESPONSIVE CSS ---------------------------- */

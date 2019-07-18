@@ -2,24 +2,24 @@
 
 nav {
   background-color: #536785;
-  color: #EADED4;
+  color: #eaded4;
   height: 120px;
   width: 100%;
   z-index: 1000; /*may need to adjust*/
   position: fixed;
-    top: 0px;
-    right: 0;
-    left: 0;
+  top: 0px;
+  right: 0;
+  left: 0;
   padding: 1.5em;
 }
 
 .navLogo {
-  font-family: 'bungee';
+  font-family: "bungee";
   float: left;
 }
 
 .navTweet {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   float: right;
 }
 
@@ -30,7 +30,7 @@ nav {
   clear: both;
   margin: 0px 79px;
   text-decoration: none;
-  color: #D77D6F;
+  color: #d77d6f;
   border: none;
   background: none;
   outline: inherit;
@@ -39,11 +39,17 @@ nav {
   animation: bounce 1s infinite alternate;
 }
 @-webkit-keyframes bounce {
-  to { -webkit-transform: scale(1.7); }
+  to {
+    -webkit-transform: scale(1.7);
+  }
 }
 @-moz-keyframes bounce {
-  to { -moz-transform: scale(1.7); }
+  to {
+    -moz-transform: scale(1.7);
+  }
 }
 @keyframes bounce {
-  to { transform: scale(1.7); }
+  to {
+    transform: scale(1.7);
+  }
 }

@@ -7,7 +7,6 @@
   padding: 25px 15px 0px 15px;
   overflow: hidden;
   margin: 0px 10px 0px 10px;
-  
 }
 
 .new-tweet > form > textarea {
@@ -20,7 +19,7 @@
   resize: none;
   animation: shadow-pulse 1s infinite;
   border-radius: 25px;
-  outline:none;
+  outline: none;
   padding: 5px 0px 0px 15px;
 }
 
@@ -35,7 +34,7 @@
 }
 
 .new-tweet > form > input:hover {
-  background-color: #3e8e41
+  background-color: #3e8e41;
 }
 
 .new-tweet > form > input:active {
@@ -43,7 +42,6 @@
   transform: translateY(4px);
   box-shadow: 0 9px #999;
 }
-
 
 .new-tweet > form > .counter {
   float: right;
@@ -58,7 +56,7 @@
 /* ----------------------------ERROR MESSAGE----------------------------  */
 
 .errors {
-  margin: 50px 0px -45px 0px;
+  margin: 50px 0px -35px 0px;
   text-align: center;
 }
 
@@ -72,22 +70,20 @@
 
 /* ----------------------------BUTTON ANIMATION----------------------------  */
 
-@keyframes shadow-pulse-big
-{
+@keyframes shadow-pulse-big {
   0% {
-    box-shadow: 0 0 0 0px rgb(226, 228, 235)
+    box-shadow: 0 0 0 0px rgb(226, 228, 235);
   }
   100% {
-    box-shadow: 0 0 0 10px rgb(179, 187, 214)
+    box-shadow: 0 0 0 10px rgb(179, 187, 214);
   }
 }
 
-@keyframes shadow-pulse
-{
+@keyframes shadow-pulse {
   0% {
-    box-shadow: 0 0 0 0px rgb(209, 211, 218)
+    box-shadow: 0 0 0 0px rgb(209, 211, 218);
   }
   100% {
-    box-shadow: 0 0 0 15px rgb(194, 199, 214)
+    box-shadow: 0 0 0 15px rgb(194, 199, 214);
   }
 }
