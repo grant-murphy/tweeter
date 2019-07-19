@@ -55,6 +55,7 @@
 @media only screen and (max-width: 1023px) {
   main {
     width: 100%;
+    margin: 30px 80px 0px 0px;
   }
 
   .main-header {
@@ -64,5 +65,13 @@
   .errors {
     margin: 50px 0px 0px 0px;
     text-align: center;
+  }
+
+  .new-tweet > form {
+    padding: 40px 15px 0px 15px;
+  }
+
+  .errors {
+    margin: 10px 0px 0px 0px;
   }
 }
