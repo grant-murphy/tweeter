@@ -13,14 +13,20 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 33px;
+  padding: 33px 33px 13px 33px;
   justify-content: center;
   align-items: center;
 }
 
-.main-header h2 {
+.main-header .name {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0%;
+  font-size: 2em;
 }
+
+.name b {
+  padding-right: 20px;
+}
+

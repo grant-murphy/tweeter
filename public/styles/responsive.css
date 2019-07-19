@@ -60,6 +60,11 @@
 
   .main-header {
     margin: 0px;
+    background-color: #536785;
+  }
+
+  nav {
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   }
 
   .errors {
