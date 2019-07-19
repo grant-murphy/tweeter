@@ -76,5 +76,12 @@
   width: 0.65em;
   float: right;
   margin: 5px;
+  opacity: 0;
 }
 
+.tweet:hover > footer > .buttons > img {
+  float: right;
+  color: black;
+  opacity: 20;
+  transition: 1s;
+}
