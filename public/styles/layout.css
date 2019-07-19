@@ -4,8 +4,7 @@
  * Do not modify these two selectors, please
  */
 
-/* ---------------------------- DELETE BEFORE SUBMISSION ---------------------------- */
-
+ /* ---------------------------- GLOBAL CSS ---------------------------- */
 html {
   box-sizing: border-box;
 }
@@ -14,16 +13,12 @@ html {
   box-sizing: inherit;
 }
 
-/* ---------------------------- GLOBAL LAYOUT ---------------------------- */
-
 body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
   margin-top: 120px;
 }
-
-/* ---------------------------- ADDITIONAL CSS ---------------------------- */
 
 main {
   margin: 0 auto;

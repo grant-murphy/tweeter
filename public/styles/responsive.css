@@ -1,4 +1,4 @@
-/* ---------------------------- RESPONSIVE CSS ---------------------------- */
+/* ----------------------------RESPONSIVE CSS FOR MIN-WIDTH of 1024px---------------------------- */
 
 @media only screen and (min-width: 1024px) {
   main {
@@ -26,16 +26,18 @@
     border: black solid 3px;
   }
 
-  .tweets {
-    margin-top: 30px;
-    overflow: hidden;
-  }
-
   .new-tweet > form {
     padding: 60px 30px 0px 30px;
     overflow: hidden;
   }
+
+  .tweets {
+    margin-top: 30px;
+    overflow: hidden;
+  }
 }
+
+/* ----------------------------RESPONSIVE CSS FOR MAX-WIDTH of 1572px---------------------------- */
 
 @media only screen and (max-width: 1572px) {
   main {
@@ -47,6 +49,8 @@
     margin: 120px 0px 0px 80px;
   }
 }
+
+/* ----------------------------RESPONSIVE CSS FOR MAX-WIDTH of 1023px---------------------------- */
 
 @media only screen and (max-width: 1023px) {
   main {

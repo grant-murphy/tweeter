@@ -17,10 +17,10 @@
   border: none;
   background-color: #f4f1ec;
   resize: none;
-  animation: shadow-pulse 1s infinite;
+  animation: shadow-pulse 1.2s infinite;
   border-radius: 25px;
-  outline: none;
   padding: 5px 0px 0px 15px;
+  outline: none;
 }
 
 .new-tweet > form > input {
@@ -30,17 +30,17 @@
   cursor: pointer;
   margin-top: 15px;
   outline: none;
-  box-shadow: 0px 9px #666;
+  box-shadow: 0px 14px #666;
 }
 
 .new-tweet > form > input:hover {
-  background-color: #3e8e41;
+  background-color: #3f587e;
 }
 
 .new-tweet > form > input:active {
-  background-color: #3e8e41;
-  transform: translateY(4px);
-  box-shadow: 0 9px #999;
+  background-color: #3f587e;
+  transform: translateY(1px);
+  box-shadow: 0 13px #999;
 }
 
 .new-tweet > form > .counter {
@@ -68,7 +68,7 @@
   float: right;
 }
 
-/* ----------------------------BUTTON ANIMATION----------------------------  */
+/* ----------------------------TEXTFIELD ANIMATION----------------------------  */
 
 @keyframes shadow-pulse-big {
   0% {

@@ -1,19 +1,24 @@
+// Preventing XSS with Escaping Function
 const escape = function (str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
 
+// Focus in on Textfield Function
 const focusField = function() {
   $( ".tweet-text-area" ).focus()
+  
 }
 
+// Toggle Button Function (Toggles Tweet Input using the Compose Button)
 const toggleButton = function () {
   $(".new-tweet").slideToggle("slow", function () {
-    focusField()
+    focusField();
   })
 };
 
+// Error Button Function (Displays errors within Form Submission Function)
 const errorButton = function () {
   $(".errors").slideToggle("slow")
 };
@@ -55,6 +60,7 @@ const loadTweets = function () {
     });
 }
 
+// Form Submission Function (IF/ELSE statements making sure user inputs text and doesn't exceed character count)
 const formSubmission = function () {
   $("#submit-form").submit(function (event) {
     event.preventDefault();

@@ -1,4 +1,4 @@
-/* ---------------------------- NAV STYLING ---------------------------- */
+/* ----------------------------NAV STYLING---------------------------- */
 
 nav {
   background-color: #536785;
@@ -23,6 +23,8 @@ nav {
   float: right;
 }
 
+/* ----------------------------FONT AWESOME ICON---------------------------- */
+
 .fa-angle-double-down {
   font-size: 1.5em;
   cursor: pointer;
@@ -34,9 +36,12 @@ nav {
   border: none;
   background: none;
   outline: inherit;
-  -webkit-animation: bounce 1s infinite alternate;
-  -moz-animation: bounce 1s infinite alternate;
-  animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce .75s infinite alternate;
+  -moz-animation: bounce .75s infinite alternate;
+  animation: bounce .75s infinite alternate;
+
+/* ----------------------------IMPLEMENTING BOUNCE ANIMATION---------------------------- */
+
 }
 @-webkit-keyframes bounce {
   to {
