@@ -6,26 +6,27 @@ const escape = function (str) {
 }
 
 // Focus in on Textfield Function
-const focusField = function() {
-  $( ".tweet-text-area" ).focus()
-  
+const focusField = function () {
+  $(".tweet-text-area").focus()
+
 }
 
 // Toggle Button Function (Toggles Tweet Input using the Compose Button)
 const toggleButton = function () {
   $(".new-tweet").slideToggle("slow", function () {
     focusField();
+    $(".errors").hide();
   })
 };
 
 // Error Button Function (Displays errors within Form Submission Function)
-const errorButton = function () {
-  $(".errors").slideToggle("slow")
-};
+// const errorButton = function () {
+//   $(".errors").slideToggle("slow")
+// };
 
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -87,14 +88,15 @@ const formSubmission = function () {
 
     if (counterLen === 0 || counterLen > 140) {
       if (counterLen === 0) {
-        errorButton()
         $(".errors").html(`<img src="/images/invalid-input.png" />`)
+        $('.errors').slideDown(200);
       }
       if (counterLen > 140) {
-        errorButton()
         $(".errors").html(`<img src="/images/exceeded-characters.png" />`)
+        $('.errors').slideDown(200);
       }
     } else {
+      $(".errors").hide();
       $.ajax('/tweets/', {
         method: 'POST',
         data: form_data
